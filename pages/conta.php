@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $mail->Password='#app123456';
 
     $mail->setFrom($_POST['email'],$_POST['nombre']);
-    $mail->addAddress('appcovidcitas@gmail.com');
+    $mail->addAddress($_POST['email'],'appcovidcitas@gmail.com');
     $mail->addReplyTo($_POST['email'],$_POST['nombre']);
 
     $mail->isHTML(true);
